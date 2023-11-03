@@ -1,6 +1,6 @@
 /* Apply styles to the header */
 header {
-    background-color: #1b262c; /* Set the background color to black */
+    background-color: black; /* Set the background color to black */
     color: white; /* Set text color to white for the header */
     text-align: center; /* Center-align header content */
     padding: 10px 20px;
