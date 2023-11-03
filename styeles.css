@@ -1,0 +1,229 @@
+/* Apply styles to the header */
+header {
+    background-color: #1b262c; /* Set the background color to black */
+    color: white; /* Set text color to white for the header */
+    text-align: center; /* Center-align header content */
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Style the logo image */
+  .logo img {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Set a fixed height to make it round */
+    border-radius: 20%; /* Create a circular shape */
+    border: 0px solid white; /* Add a border with a white color */
+    margin: 10px; /* Add margin for spacing */
+  }
+  
+  /* Style the main menu links */
+  .main-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center-align menu items */
+    flex-wrap: wrap;
+  }
+  
+  .main-menu li {
+    margin: 0 20px; /* Add spacing between menu items */
+    white-space: nowrap;
+  }
+  
+  .main-menu a {
+    color: white; /* Set text color to white */
+    text-decoration: none; /* Remove the underline */
+  }
+  
+  
+  
+  
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: Helvetica, sans-serif;
+  }
+  
+  
+  body.scrolling .carousel-container {
+    opacity: 0; /* Reduce opacity to make them disappear */
+  }
+  /* Centered text container */
+  .center-text {
+    text-align: center;
+  }
+  
+  .center-text-text {
+    color: black;
+    font-weight: bold;
+    font-size: 28px;
+  }
+  
+  .center-text-text1 {
+    color: black;
+    font-size: 14px;
+  }
+  
+  /* Permanent text overlay for mobile */
+  .text-overlay-mobile {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: whitesmoke;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 34px;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  /* Hover text overlay for desktop */
+  .text-overlay-desktop {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: whitesmoke;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+    opacity: 1; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition on opacity change */
+  }
+  
+  /* For screens with a maximum width of 768px (typical for smartphones) */
+  @media (max-width: 768px) {
+    .carousel-container {
+      display: flex;
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      justify-content: center; /* Center items horizontally */
+      margin: 0; /* Reset margin */
+    }
+  
+    .carousel-item {
+      flex: 0 0 calc(100% - 20px); /* Adjusted width here */
+      height: auto; /* Allow height to adjust based on content */
+      margin: 10px 0; /* Add margin to separate items */
+    }
+  
+    .text-overlay-desktop {
+      display: none; /* Hide desktop text overlay on mobile */
+    }
+  }
+  
+  /* For screens wider than 768px (typical for desktop) */
+  @media (min-width: 769px) {
+    .carousel-item:hover .text-overlay-desktop {
+      opacity: 1; /* Show the text overlay when hovering on desktop */
+    }
+  
+    .text-overlay-mobile {
+      display: none; /* Hide mobile text overlay on desktop */
+    }
+  
+    /* Carousel styles */
+    .carousel-container {
+      display: flex;
+      justify-content: space-around;
+      margin: 0 2cm;
+    }
+  
+    .carousel-item {
+      flex: 0 0 calc(49.5%);
+      height: 500px;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s;
+      margin: 10px 0;
+    }
+  
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  
+    .carousel-item:hover {
+      transform: scale(1.05);
+    }
+  }
+/* Style for the footer container */
+footer {
+    background-color: #000; /* Black background for the footer */
+    color: white; /* Text color */
+    padding: 20px; /* Add padding to the footer for spacing */
+}
+
+/* Style for the footer content */
+footer .container {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center horizontally */
+}
+
+/* Style for the footer list */
+footer .footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center-align list items */
+}
+
+footer .footer-list li {
+    margin: 10px 0; /* Add spacing between list items */
+}
+
+footer .footer-list a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Style for the subscribe form */
+footer .subscribe {
+    text-align: center; /* Center-align the entire subscribe section */
+}
+
+footer .subscribe h3 {
+    margin: 0 0 10px; /* Add spacing between the heading and form */
+}
+
+footer .subscribe form {
+    display: flex;
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: center; /* Center-align input and button */
+}
+
+footer .subscribe input[type="email"] {
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    margin: 0 0 10px; /* Add spacing between input and button */
+}
+
+footer .subscribe button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+footer .subscribe button:hover {
+    background-color: #0056b3; /* Hover background color */
+}
+/* Style for the copyright text */
+footer p {
+    text-align: center; /* Center-align the copyright text */
+    margin: 0; /* Remove any default margin */
+}
+
